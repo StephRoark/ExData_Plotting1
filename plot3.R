@@ -2,7 +2,7 @@
 #Plot the 3 sub-metering variables for power usage
 
 #read the data
-data <- read.csv("household_power_consumption.txt", na.strings = "?", sep=";", stringsAsFactors=FALSE)
+#data <- read.csv("household_power_consumption.txt", na.strings = "?", sep=";", stringsAsFactors=FALSE)
 
 #add the date range and convert to timestamp to subset the data
 mydates <- c("1/2/2007", "2/2/2007")
@@ -21,4 +21,4 @@ points(subdata$timestamp, subdata$Sub_metering_2, col = "red", type = "l")
 points(subdata$timestamp, subdata$Sub_metering_3, col = "blue", type = "l")
 
 #add a legend
-legend("topright", legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),col=c("black","red","blue"),lty=c(1,1,1), bty="n", cex= 0.75, xjust=1, inset = 0.1)
+legend("topright", legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),col=c("black","red","blue"),lty=c(1,1,1), cex= 0.75, xjust=1)
